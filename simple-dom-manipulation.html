@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter text">
+    <p id="display"></p>
+
+    <script>
+        var inputElement = document.getElementById('myInput');
+        var displayElement = document.getElementById('display');
+
+        // Event listener for input changes
+        inputElement.addEventListener('input', function() {
+            displayElement.innerHTML = inputElement.value; // Update display with input value
+        });
+
+        // Event listener for keydown event
+        document.addEventListener('keydown', function(event) {
+            console.log('Key pressed:', event.key); // Log the key that was pressed
+        });
+    </script>
+</body>
+</html>

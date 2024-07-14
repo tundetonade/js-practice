@@ -1,0 +1,70 @@
+<html>
+<head>
+</head>
+<body>
+    <center>
+    <h2 id="login-page">LOGIN PAGE</h2>
+    <form>
+        Email: <input type="text" id="email">
+        <p id="show"></p>
+        Password: <input type="password" id="password"><br><br>
+        <button id="submit-button">LOGIN NOW</button><br><br>
+        
+
+    </form>
+
+    <h3 id="digit">0</h3>
+    <button id="plus">Plus</button>&nbsp;&nbsp;<button id="minus">Minus</button>
+</center>
+    
+    
+    <script>
+        var emailField = document.getElementById('email');
+        var displayEmail = document.getElementById('show');
+
+        emailField.addEventListener('input', function(){
+        displayEmail.innerHTML = emailField.value;
+        });
+        // Event listener for keydown event
+        document.addEventListener('keydown', function(event) {
+            console.log('Key pressed:', event.key); // Log the key that was pressed
+        });
+
+
+        var login = document.getElementById('submit-button');
+        login.addEventListener('click', function(event)
+        {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            var loginContent = document.getElementById('login-page');
+            loginContent.innerHTML = "Yipee! CHANGED LOGIN PAGE";
+            var emailx = document.getElementById('email');
+            var email = emailx.value;
+console.log(`The email entered is: ${email}`);
+        });
+
+        
+        var plus = document.getElementById('plus');
+        var minus = document.getElementById('minus');
+        
+        plus.addEventListener('click', function(event){
+            var digitPlus = document.getElementById('digit');
+            var newDigitPlus = parseInt(digitPlus.innerHTML);
+          digitPlus.innerHTML = newDigitPlus + 1; 
+            console.log(`You just clicked ${newDigitPlus} times`);
+        });
+
+        minus.addEventListener('click', function(event){
+            var digitMinus = document.getElementById('digit');
+            var newDigitMinus = parseInt(digitMinus.innerHTML);
+            if(newDigitMinus > 0){
+                digitMinus.innerHTML = newDigitMinus - 1;
+                console.log(`You returned the click back to ${newDigitMinus}`);
+            }
+        });
+        
+
+
+    </script>
+</body>
+</html>
