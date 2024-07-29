@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>DOM Manipulations</title>
+    </head>
+    <body>
+        <center>
+<h2>America Voting System</h2>
+<h3 id="totalVote">The Total Vote is 0</h3>
+<h3><span id="totalDemocratic">Democratic Vote: 0</span> &nbsp;&nbsp;&nbsp;&nbsp; <span id="totalRepublican">Republican Vote: 0</span></h3>
+<button onClick="voteDemocratic()">Vote Democratic</button>&nbsp;&nbsp;&nbsp;<button onClick="voteRepublican()">Vote Republican</button>
+        </center>
+
+        <script>
+            let countDem = 0;
+            let countRep = 0;
+
+            function voteDemocratic(){
+                //countDem++; this is correct too and perfect
+                countDem = countDem + 1;
+              let totalDem = document.getElementById('totalDemocratic');
+              totalDem.innerHTML = `Democratic Vote: ${countDem} `;
+             
+              console.log(`Current democratic vote is: ${countDem} and function totalVote() is: ${totalVote()}`);
+                return countDem;
+            }
+
+            function voteRepublican(){
+                //countRep++; this is correct too and perfect.
+                countRep = countRep + 1;
+
+                let totalRep = document.getElementById('totalRepublican');
+                totalRep.innerHTML = `Republican Vote: ${countRep}`;
+               
+                console.log(`Current republican vote is: ${countRep} and function totalVote() is: ${totalVote()}`);
+                return countRep;
+            }
+
+            function totalVote(){
+            let totalV = countDem + countRep; 
+              document.getElementById('totalVote').innerHTML = `The Total Vote is: ${totalV}`;
+               return totalV;
+            }
+        </script>
+    </body>
+
+</html>

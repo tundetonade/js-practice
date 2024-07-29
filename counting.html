@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>learnng simple JS</title>
+</head>
+
+<body>
+    <p id="displayContent">You clicked 0 times</p>
+    <button onclick="changeContent()">Change Content</button>
+
+    <script>
+        let count = 0;
+function changeContent(){
+let disp = document.getElementById('displayContent');
+console.log(`You clicked ${count}  times`);
+disp.innerHTML = count ++;
+
+}
+    </script>
+</body>
+
+</html>
