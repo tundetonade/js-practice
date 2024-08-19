@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Interval Function</title>
+</head>
+<body>
+    <center>
+        <h2 id="processAction">Click Button To Start</h2>
+        <button onclick="startAction()">Start Now</button>
+
+    </center>
+    <script>
+function startNow(){
+    let displayContent = "Hey Mummy SEADDO!";
+    document.getElementById('processAction').innerHTML = displayContent;
+    console.log(`The new displayed content is: ${displayContent}`);
+    // Force re-render
+  document.getElementById('processAction').scrollIntoView();
+}
+
+       function startAction(){
+setInterval(startNow, 1000);
+        }
+            
+        
+    </script>
+</body>
+</html>
