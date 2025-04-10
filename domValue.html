@@ -4,13 +4,15 @@
     </head>
 <body>
 <h1 id="theMainHeader">Hello Header</h1>
+<button onclick="updateDValue()">Click To Change The Value</button>
 
 <script>
-const dValue = document.getElementById('theMainHeader');
+   function updateDValue(){
+        const dValue = document.getElementById('theMainHeader');
 console.log(dValue);
 dValue.innerHTML = "This is the updated new Header";
 console.log(dValue.innerHTML);
-
+    }
 </script>
 </body>
 
