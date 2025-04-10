@@ -6,12 +6,15 @@
 <body>
     
     <h2>Hello DOM!</h2>
-<div id="root"></div>
+<div id="root">0</div>
 <button onclick="upDateDome()">Click Me</button>
 
 <script>
+    let count = 0;
+    
 function upDateDome(){
-    document.getElementById('root').innerHTML = 'DOM Updated!';
+    count ++;
+    document.getElementById('root').innerHTML = count;
     console.log('testing this');
 }
 
