@@ -1,0 +1,20 @@
+<!Doctype html>
+<head><title>Mapping Array</title></head>
+<body>
+    <div id="root"></div>
+    <div id="nArray"></div>
+<script>
+    const dArray = ['Mimi', 'Leticia', 'Bethel'];
+    const nArray = [1, 2, 3, 4, 5];
+
+    let mappedArray = dArray.map(item => item);
+    console.log(mappedArray);
+    document.getElementById('root').innerHTML = mappedArray;
+
+    let mappedNArray = nArray.map(item => item * item);
+    console.log(mappedNArray);
+    document.getElementById('nArray').innerHTML = mappedNArray;
+
+</script>
+</body>
+</html>
