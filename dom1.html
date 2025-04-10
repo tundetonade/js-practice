@@ -7,10 +7,14 @@
     
     <h2>Hello DOM!</h2>
 <div id="root"></div>
+<button onclick="upDateDome()">Click Me</button>
 
 <script>
-document.getElementById('root').innerHTML = 'DOM Updated!';
-console.log('testing this');
+function upDateDome(){
+    document.getElementById('root').innerHTML = 'DOM Updated!';
+    console.log('testing this');
+}
+
 </script>
 </body>
 
