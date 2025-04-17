@@ -1,0 +1,18 @@
+<button onclick="displayNow('User', myCallbackFunction)">Click to Display</button>
+<div id="root"></div><br><br>
+<div id="helper"></div>
+
+<script>
+    function displayNow(name, callBack) {
+        document.getElementById("root").innerHTML = "hello " + name + "!";
+        console.log("function display Name was called");
+        if (typeof callBack === 'function') {
+            callBack();
+        }
+    }
+
+    function myCallbackFunction() {
+        document.getElementById("helper").innerHTML = "Value of Callback Function";
+        console.log("this is the main call back");
+    }
+</script>
