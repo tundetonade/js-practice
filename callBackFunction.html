@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head><title>Lerning CallBack Function</title></head>
+<body>
+
+    <button onclick="triggerFirstButton()">Click Me To Trigger The First Button</button><br><br>   
+<div id="root"></div><br><br>
+
+<div id="helper"></div><br><br>
+
+<script>
+function triggerFirstButton(){
+    document.getElementById("root").innerHTML = "<button onclick=\"triggerHelper()\">I am The Second Button, Click Me To Trigger Helper Otherwise The Third Button</button>";
+    console.log("first trigger Button");
+}
+
+function triggerHelper(){
+   document.getElementById("helper").innerHTML = "Yes I am the Helper which in other hand is meant to be the Third Buton";
+   console.log("second button clicked before I could reach here");
+  
+}
+</script>
+</body>
+
+</html>
