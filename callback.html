@@ -6,9 +6,9 @@
     function displayNow(name, callBack) {
         document.getElementById("root").innerHTML = "hello " + name + "!";
         console.log("function display Name was called");
-        if (typeof callBack === 'function') {
+        
             callBack();
-        }
+       
     }
 
     function myCallbackFunction() {

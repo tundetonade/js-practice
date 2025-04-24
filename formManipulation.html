@@ -1,0 +1,18 @@
+<div id=root></div>
+
+<form id="formDOM">
+    <label>FullName</label>
+    <input id="fullName" name="fullName" type="text" required><br><br>
+    <button id="submitButton" type="submit">Click Me</button>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+const formInput = document.getElementById("formDOM");
+formInput.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fullName = document.getElementById("fullName").value;
+    console.log("The fullname is:" + ' ' + fullName);
+})
+    })
+</script>
