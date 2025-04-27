@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>Event Listeners</head>
+<body>
+    <div id="testDiv">
+        <button id="testButton">Click Me!</button>
+        <p id="testMessage"></p>
+        <p id="messageMouseOver"></p>
+        <p id="messageMouseOut"></p>
+    </div>
+
+<script>
+    const testButton = document.getElementById("testButton");
+    const testMessage = document.getElementById("testMessage");
+   
+    const processMessage = () => {
+        //testMessage.textContent = "Hey Guy, You just clicked a button";
+        testMessage.textContent = 'Hey Guy, You just clicked a button';
+        console.log("The button was clicked");
+    }   
+
+    const processMouseOver = ()=> {
+document.getElementById("messageMouseOver").textContent = "You Mouse Over Now";
+console.log("There is a Mouse Over Now");
+    }
+
+    const processMouseOut = ()=> {
+document.getElementById("messageMouseOut").textContent = "You Mouse Out Now";
+console.log("There is a Mouse Out Now");
+    }
+    
+    testButton.addEventListener("click", processMessage);
+    testButton.addEventListener("mouseover", processMouseOver);
+    testButton.addEventListener("mouseout", processMouseOut);
+</script>
+</body>    
+</html>
