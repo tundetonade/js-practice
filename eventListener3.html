@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head><title>Event Listener 3</title></head>
+<body>
+    <center>
+    <div id="testDiv" style="background-color: black; width: 300px; height: 300px;"><br><br>
+        
+    </center>
+    </div>
+    <br><br>
+   <center> <button id="changeToBlue">Change to Blue</button> &nbsp;&nbsp; <button id="changeToRed">Change to Red</button></center>
+<script>
+    const testDiv = document.getElementById("testDiv");
+    const changeToBlue = document.getElementById("changeToBlue");
+    const changeToRed = document.getElementById("changeToRed");
+
+    changeToBlue.addEventListener('click', function (){
+        testDiv.style.backgroundColor = "Blue";
+        console.log("you have changed the div to blue");
+    });
+
+    changeToRed.addEventListener('click', function (){
+testDiv.style.backgroundColor = "Red";
+console.log("you have changed the div to red");
+    });
+</script>
+</body>
+</html>

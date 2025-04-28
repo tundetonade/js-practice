@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<head>Event Listeners</head>
+<head><title>Event Listener 2</title></head>
 <body>
-    <div id="testDiv">
-        <button id="testButton">Click Me!</button>
-        <p id="testMessage"></p>
-    </div>
+    <button id="testButton">Click Me!</button>
+</body>
 
 <script>
     const testButton = document.getElementById("testButton");
-    const testMessage = document.getElementById("testMessage");
 
-    testButton.addEventListener("click", processMessage());
-    const processMessage = () => {
-        testMessage.textContent('Hey Guy, You just clicked a button');
-        console.log("The button was clicked");
-    }    
+    testButton.addEventListener('click', function (){
+        console.log("There is a click");
+    });
+
+    testButton.addEventListener('mouseover', function (){
+        testButton.style.backgroundColor = "Blue";
+        console.log("there is a mouseover");
+    });
+
+    testButton.addEventListener('mouseout', function(){
+        testButton.style.backgroundColor = "";
+        console.log("there is a mouseout");
+    })
 </script>
-</body>    
 </html>
