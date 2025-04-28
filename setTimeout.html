@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<title>Learning setTimeout()</title>
+
+<body>
+
+    <h4>Text will display below after 5 seconds</h4>
+    <h2 id="displayText"></h2>
+<script>
+const displayText = document.getElementById("displayText");
+
+setTimeout(()=>{
+    displayText.textContent = "This is the new message";
+    console.log("setTimeout was just used");
+}, 5000);
+</script>
+</body>
+
+</html>
