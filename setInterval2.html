@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head><title>setInterval</title></head>
+<body>
+    <h4>Below is basic slide</h4>
+    <h2 id="textSlider"></h2>
+
+    <script>
+        const textSlider = document.getElementById("textSlider");
+        const textData = ["This is Text Slide 1",
+            "This is Text Slide 2",
+            "This is Text Slide 3",
+            "This is Text Slide 4",
+            "This is Text Slide 5"
+        ];
+
+        let position = 0;
+
+        setInterval(() =>{
+            if(position < textData.length){
+textSlider.innerHTML = textData[position];
+position ++;
+console.log("text slider occured");
+            }
+            else{
+                position = 0;
+            }
+        }, 5000);
+    </script>
+</body>    
+
+</html>
