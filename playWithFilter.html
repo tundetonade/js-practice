@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <header>
+        <title>Playwith with filter</title>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const data = ['Addo', 'Prince', 'Rhema', 'Addo', 'Debby', 'Bethel', 'Rhema', 'Rhema'];
+
+        const filterData = (propData)=>{
+            return propData.filter((dElement => {
+                return(dElement.length > 4);
+            }))
+        }
+        console.log(filterData(data));
+    </script>
+
+    
+</body>
+
+</html>
