@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Playwith with reduce</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const data = [6, 5, 3, 2, 5]
+
+        const reduceData = (propData)=>{
+            return propData.reduce((previousValue, CurrentValue) =>{
+                if(CurrentValue > previousValue){
+                    return previousValue;                }
+                else{
+                    return CurrentValue;
+                }
+            })
+        }
+        console.log(reduceData(data));
+    </script>
+
+    
+</body>
+
+</html>
