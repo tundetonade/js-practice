@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Filter Unique Elements</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+
+    </main>
+    <footer></footer>
+    <script>
+        const data = ['Addo', 'Pirro', 'Rhema', 'Addo', 'Pirro', 'Debby', 'Bethel'];
+        
+        const filterUnique = (arrayElement)=>{
+            const uniqueElements = [];
+            for(let i=0; i < arrayElement.length; i++){
+                if(!uniqueElements.includes(arrayElement[i])){
+                 uniqueElements.push(arrayElement[i]);
+                }
+            }
+            return uniqueElements;
+        }
+        console.log(filterUnique(data));
+    </script>
+
+    
+</body>
+
+</html>
